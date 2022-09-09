@@ -1,0 +1,305 @@
+.Courses {
+    width: 100%;
+    padding-top: 2rem;
+
+    .CourseActive {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.04em;
+        color: #22A4E2;
+    }
+
+    .CourseTitle {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.04em;
+        color: #000000;
+        margin-bottom: 3rem;
+    }
+
+    .CoursesBoxs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+
+        .CourseCard {
+            height: 450px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+
+            .cardImg {
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            .CoursesBoxDesk {
+                padding: 0 2rem;
+            }
+
+            .cardBody {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                img {
+                    position: absolute;
+                    top: -25px;
+                    right: inherit;
+                }
+
+                h6 {
+                    padding-top: 50px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #22A4E2;
+                }
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #000000;
+                }
+
+                h5 {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .CardFooter {
+                border-top: 1px solid #E0E2E8;
+
+                ul {
+                    width: 100%;
+                    padding: 0.5rem 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    li {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #757782;
+                    }
+
+                    .line {
+                        background-color: #E0E2E8;
+                        height: 25px;
+                        width: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.CousePurpose {
+    position: relative;
+    width: 100%;
+    margin-top: 10rem;
+
+    .PurposeVideo {
+        width: 100%;
+        background: url(../../images/purposeVideo.png);
+        height: 560px;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .PurposeBg {
+        position: absolute;
+        top: 360px;
+        width: 100%;
+        background: linear-gradient(rgba(7, 9, 19, 0.8), rgba(7, 9, 19, 0.8)), url(../../images/purposeBg.png);
+        background-size: cover;
+        color: #fff;
+        height: 650px;
+        z-index: -1;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .PurposeBox {
+            margin-top: 350px;
+
+            h6 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.04em;
+                color: #22A4E2;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 39px;
+                letter-spacing: 0.04em;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 0.04em;
+                color: #757782;
+                margin-top: 3rem;
+            }
+
+        }
+
+        .PurposeBox2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            color: #fff;
+            padding-top: 350px;
+            gap: 2rem;
+
+            .PurposeResult {
+                background: #010101;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem 0;
+
+                h1 {
+                    margin: 1rem 0;
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 44px;
+                    letter-spacing: 0.04em;
+                }
+
+                h5 {
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 0.04em;
+                    color: #AFB2C1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .Courses {
+        padding: 0;
+    }
+
+    .Courses .CoursesBoxs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 744px) {
+    .Courses .CoursesBoxs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Courses .CoursesBoxs .CourseCard {
+        height: auto;
+    }
+
+    .Courses .CoursesBoxs .CourseCard .CoursesBoxDesk {
+        padding: 0 1rem;
+    }
+
+    .CousePurpose .PurposeBg .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .CousePurpose .PurposeVideo {
+        height: 360px;
+    }
+
+    .CousePurpose .PurposeBg {
+        position: absolute;
+        top: 260px;
+        height: auto;
+        z-index: -1;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox {
+        margin-top: 150px;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        color: #fff;
+        padding-top: 10px;
+        gap: 0.5rem;
+        z-index: 10;
+        padding-bottom: 1rem;
+    }
+
+    .CousePurpose .PurposeVideo img {
+        width: 70px;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox h1 {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox p {
+        font-size: 16px;
+        line-height: 30px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .Courses .CoursesBoxs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .Courses .CoursesBoxs .CourseCard {
+        height: auto;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox h1 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox2 .PurposeResult {
+        padding: 0.5rem 0;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox2 .PurposeResult h1 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .CousePurpose .PurposeBg .PurposeBox2 .PurposeResult h5 {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}
