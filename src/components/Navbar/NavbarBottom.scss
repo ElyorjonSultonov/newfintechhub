@@ -1,0 +1,123 @@
+$gray: #757782;
+.NavbarBottom {
+  z-index: 999;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0;
+  position: sticky;
+  top: 0;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  border-top: 1px solid #e0e2e8;
+  .NavLinks {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 0 7rem;
+      position: relative;
+      li {
+        color: $gray;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 2.5px;
+          background: #3498db;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.5s;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: 100%;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          background: #3498db;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.5s;
+        }
+
+        &:hover {
+          color: #22a4e2;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        &:hover::before {
+          transform: scaleX(1);
+          transform-origin: right;
+        }
+      }
+    }
+  }
+
+  .NavEnd {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+  }
+}
+@media (max-width: 1250px) {
+  .NavbarBottom .NavLinks ul {
+    gap: 0 3rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .NavbarBottom .NavLinks ul {
+    gap: 0 0.5rem;
+    li {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 744px) {
+  .NavbarBottom .NavLinks {
+    width: 100%;
+  }
+
+  .NavbarBottom .NavLinks ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    li {
+      margin-right: 0;
+    }
+  }
+
+  .NavbarBottom .NavLinks ul li {
+    font-size: 14px;
+  }
+  .NavbarBottom .NavEnd {
+    display: none;
+  }
+}
+@media (max-width: 610px) {
+  .NavbarBottom .NavLinks ul {
+    gap: 2px;
+  }
+}
+@media (max-width: 576px) {
+  .Search,
+  .NavbarBottom,
+  .container .NavDesk {
+    display: none;
+  }
+}

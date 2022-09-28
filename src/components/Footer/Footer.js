@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Footer.scss'
+import ScrollToTop from "react-scroll-to-top";
+import ScrollTrigger from 'react-scroll-trigger';
 
 const Footer = () => {
     return (
+
         <>
             <div className="Footer">
+                <ScrollToTop smooth top="900" color='#fff' />
                 <div className="container ftrTop">
                     <div className="FooterContent">
                         <div className="footerLogo">
@@ -176,9 +180,9 @@ const Footer = () => {
                                 <div className="FtrConMe">
                                     <h3>Biz bilan bog’lanish</h3>
                                     <ul>
-                                        <li>Toshkent shahar, Uchtepa tumani, Lutfikor ko’chasi 112a</li>
-                                        <li>Telegram niki yoziladi yoziladi</li>
-                                        <li>97 123 45 67</li>
+                                        <p>Toshkent shahar, Uchtepa tumani, Lutfikor ko’chasi 112a</p>
+                                        <p>Telegram niki yoziladi yoziladi</p>
+                                        <p>+99871 203 88 00</p>
                                     </ul>
                                 </div>
                                 <div className="FtrConIcon">

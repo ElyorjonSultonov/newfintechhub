@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
+import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
+
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(true)
+  const showBtnBars = () => {
+    setIsMobile((p) => !p)
+  }
   return (
     <>
       <div className="Navbar">
         <div className="NavTop">
           <div className="container">
-
-            <div className="bars">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 7.75H3C2.59 7.75 2.25 7.41 2.25 7C2.25 6.59 2.59 6.25 3 6.25H21C21.41 6.25 21.75 6.59 21.75 7C21.75 7.41 21.41 7.75 21 7.75Z" fill="black" />
-                <path d="M21 12.75H3C2.59 12.75 2.25 12.41 2.25 12C2.25 11.59 2.59 11.25 3 11.25H21C21.41 11.25 21.75 11.59 21.75 12C21.75 12.41 21.41 12.75 21 12.75Z" fill="black" />
-                <path d="M21 17.75H3C2.59 17.75 2.25 17.41 2.25 17C2.25 16.59 2.59 16.25 3 16.25H21C21.41 16.25 21.75 16.59 21.75 17C21.75 17.41 21.41 17.75 21 17.75Z" fill="black" />
-              </svg>
-
+            <div onClick={showBtnBars} className="bars">
+              {isMobile ? (<AiOutlineMenu className="barsMenu" />) : (
+                <AiOutlineClose className="barsMenu" />
+              )}
             </div>
-
             <div className="NavLogo">
               <svg
                 width="100"
@@ -154,27 +156,24 @@ const Navbar = () => {
                 </defs>
               </svg>
             </div>
-
-          
-              <div className="Search">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.5 21.75C5.85 21.75 1.25 17.15 1.25 11.5C1.25 5.85 5.85 1.25 11.5 1.25C17.15 1.25 21.75 5.85 21.75 11.5C21.75 17.15 17.15 21.75 11.5 21.75ZM11.5 2.75C6.67 2.75 2.75 6.68 2.75 11.5C2.75 16.32 6.67 20.25 11.5 20.25C16.33 20.25 20.25 16.32 20.25 11.5C20.25 6.68 16.33 2.75 11.5 2.75Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M22 22.75C21.81 22.75 21.62 22.68 21.47 22.53L19.47 20.53C19.18 20.24 19.18 19.76 19.47 19.47C19.76 19.18 20.24 19.18 20.53 19.47L22.53 21.47C22.82 21.76 22.82 22.24 22.53 22.53C22.38 22.68 22.19 22.75 22 22.75Z"
-                    fill="black"
-                  />
-                </svg>
-              </div>
-
+            <div className="Search">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.5 21.75C5.85 21.75 1.25 17.15 1.25 11.5C1.25 5.85 5.85 1.25 11.5 1.25C17.15 1.25 21.75 5.85 21.75 11.5C21.75 17.15 17.15 21.75 11.5 21.75ZM11.5 2.75C6.67 2.75 2.75 6.68 2.75 11.5C2.75 16.32 6.67 20.25 11.5 20.25C16.33 20.25 20.25 16.32 20.25 11.5C20.25 6.68 16.33 2.75 11.5 2.75Z"
+                  fill="black"
+                />
+                <path
+                  d="M22 22.75C21.81 22.75 21.62 22.68 21.47 22.53L19.47 20.53C19.18 20.24 19.18 19.76 19.47 19.47C19.76 19.18 20.24 19.18 20.53 19.47L22.53 21.47C22.82 21.76 22.82 22.24 22.53 22.53C22.38 22.68 22.19 22.75 22 22.75Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
             <div className="NavDesk">
               <div className="NavNetworks">
                 <div className="instagram">
@@ -196,8 +195,6 @@ const Navbar = () => {
                     </g>
                   </svg>
                 </div>
-
-
                 <div className="facebook">
                   <svg
                     width="8"
@@ -213,7 +210,6 @@ const Navbar = () => {
                   </svg>
                 </div>
               </div>
-
               <div className="telegram">
                 <a href="https://t.me/fintechhub_admin1">
                   <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,13 +217,10 @@ const Navbar = () => {
                   </svg>
                   <span>
                     <p>Telegramdan bog’laning</p>
-                    <h5>(Telegramdagi username)</h5>
                     <h2>Biz bilan bog’laning</h2>
                   </span>
                 </a>
-
               </div>
-
               <div className="CallMarkaz">
                 <div className="phone">
                   <svg
@@ -247,22 +240,21 @@ const Navbar = () => {
                 </div>
                 <div className="CallDesk">
                   <p>Call Markaz</p>
-                  <h4>97 123 45 67</h4>
+                  <h4>+99871 203 88 00</h4>
                 </div>
               </div>
-
-
             </div>
-              <div className="NavSignUpBtn">
+            <div className="NavSignUpBtn">
               <button className="btn">Registratsiya</button>
             </div>
           </div>
         </div>
-        <div className="NavbarBottom">
+
+        {/* <div className="NavbarBottom">
           <div className="container">
             <div className="NavLinks">
-              <ul>
-                <li className="activeColor">Bosh sahifa</li>
+              <ul className="menu-7 menu">
+                <li>Bosh sahifa</li>
                 <li>Biz haqimizda</li>
                 <li>Kurslarimiz</li>
                 <li>Ustozlar</li>
@@ -294,7 +286,61 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+        </div> */}
+      </div>
+      {/* Navbar sm start ========================== */}
+
+      <div className={!isMobile ? "NavbarSm" : "d-none"} >
+        <h1>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M11.5 21.75C5.85 21.75 1.25 17.15 1.25 11.5C1.25 5.85 5.85 1.25 11.5 1.25C17.15 1.25 21.75 5.85 21.75 11.5C21.75 17.15 17.15 21.75 11.5 21.75ZM11.5 2.75C6.67 2.75 2.75 6.68 2.75 11.5C2.75 16.32 6.67 20.25 11.5 20.25C16.33 20.25 20.25 16.32 20.25 11.5C20.25 6.68 16.33 2.75 11.5 2.75Z"
+              fill="#696969"
+            />
+            <path
+              d="M21.9999 22.7499C21.8099 22.7499 21.6199 22.6799 21.4699 22.5299L19.4699 20.5299C19.1799 20.2399 19.1799 19.7599 19.4699 19.4699C19.7599 19.1799 20.2399 19.1799 20.5299 19.4699L22.5299 21.4699C22.8199 21.7599 22.8199 22.2399 22.5299 22.5299C22.3799 22.6799 22.1899 22.7499 21.9999 22.7499Z"
+              fill="#696969"
+            />
+          </svg>
+          <span>Saytdan izlash</span>
+        </h1>
+        {/* <div className="container"> */}
+        <div className="homePage">
+          <ul>
+            <li>Bosh sahifa</li>
+            <li>Biz haqimizda</li>
+            <li>Kurslarimiz</li>
+            <li>Ustozlar</li>
+            <li>Hamkorlar</li>
+            <li>Kontaktlar</li>
+          </ul>
+          <div className="contactUs">
+            <h2 className="touch">
+              <svg width="21" height="18" viewBox="0 0 21 18" fill="none">
+                <path
+                  d="M1.72648 7.88036C7.16676 5.47188 10.7945 3.88406 12.6096 3.1169C17.7922 0.926516 18.8691 0.546023 19.571 0.533325C19.7253 0.530696 20.0705 0.569572 20.2941 0.753927C20.4829 0.909593 20.5348 1.11988 20.5597 1.26746C20.5846 1.41505 20.6155 1.75126 20.5909 2.01397C20.3101 5.01244 19.0949 12.2889 18.4766 15.6473C18.215 17.0683 17.6999 17.5448 17.2013 17.5914C16.1175 17.6927 15.2946 16.8637 14.245 16.1645C12.6025 15.0705 11.6746 14.3894 10.0803 13.3219C8.23779 12.0881 9.43221 11.41 10.4822 10.3018C10.757 10.0118 15.5319 5.59854 15.6244 5.19819C15.6359 5.14812 15.6467 4.96149 15.5375 4.86293C15.4284 4.76438 15.2674 4.79808 15.1511 4.82489C14.9864 4.86288 12.3625 6.62514 7.27951 10.1117C6.53473 10.6314 5.86014 10.8846 5.25572 10.8713C4.5894 10.8567 3.30767 10.4885 2.35483 10.1737C1.18613 9.78771 0.257279 9.58362 0.338162 8.92803C0.38029 8.58656 0.843063 8.23734 1.72648 7.88036Z"
+                  fill="#22A4E2"
+                />
+              </svg>
+              <span>Biz bilan bog’laning</span>
+            </h2>
+            <h2 className="callCenter">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                  d="M20.97 17.33C20.97 17.69 20.89 18.06 20.72 18.42C20.55 18.78 20.33 19.12 20.04 19.44C19.55 19.98 19.01 20.37 18.4 20.62C17.8 20.87 17.15 21 16.45 21C15.43 21 14.34 20.76 13.19 20.27C12.04 19.78 10.89 19.12 9.75 18.29C8.6 17.45 7.51 16.52 6.47 15.49C5.44 14.45 4.51 13.36 3.68 12.22C2.86 11.08 2.2 9.94 1.72 8.81C1.24 7.67 1 6.58 1 5.54C1 4.86 1.12 4.21 1.36 3.61C1.6 3 1.98 2.44 2.51 1.94C3.15 1.31 3.85 1 4.59 1C4.87 1 5.15 1.06 5.4 1.18C5.66 1.3 5.89 1.48 6.07 1.74L8.39 5.01C8.57 5.26 8.7 5.49 8.79 5.71C8.88 5.92 8.93 6.13 8.93 6.32C8.93 6.56 8.86 6.8 8.72 7.03C8.59 7.26 8.4 7.5 8.16 7.74L7.4 8.53C7.29 8.64 7.24 8.77 7.24 8.93C7.24 9.01 7.25 9.08 7.27 9.16C7.3 9.24 7.33 9.3 7.35 9.36C7.53 9.69 7.84 10.12 8.28 10.64C8.73 11.16 9.21 11.69 9.73 12.22C10.27 12.75 10.79 13.24 11.32 13.69C11.84 14.13 12.27 14.43 12.61 14.61C12.66 14.63 12.72 14.66 12.79 14.69C12.87 14.72 12.95 14.73 13.04 14.73C13.21 14.73 13.34 14.67 13.45 14.56L14.21 13.81C14.46 13.56 14.7 13.37 14.93 13.25C15.16 13.11 15.39 13.04 15.64 13.04C15.83 13.04 16.03 13.08 16.25 13.17C16.47 13.26 16.7 13.39 16.95 13.56L20.26 15.91C20.52 16.09 20.7 16.3 20.81 16.55C20.91 16.8 20.97 17.05 20.97 17.33Z"
+                  stroke="#22A4E2"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <div className="call">
+                <span>Call Markaz</span>
+                <p>+99871 203 88 00</p>
+              </div>
+            </h2>
+          </div>
         </div>
+        {/* </div> */}
       </div>
     </>
   );

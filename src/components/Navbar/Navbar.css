@@ -1,0 +1,586 @@
+.btn {
+  background: #22a4e2;
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: #22a4e2;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #22a4e2;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  background: conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left, conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left, conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left, conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left, conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right, conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right, conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right, conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right, #22a4e2;
+  background-clip: text, padding-box;
+  background-size: 202% 202%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-position: center;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+.Navbar {
+  z-index: 11;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.Navbar .NavTop {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 11;
+}
+
+.Navbar .NavTop .bars .barsMenu {
+  font-size: 25px;
+}
+
+.Navbar .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .container .NavLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.Navbar .container .NavLogo:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.Navbar .container .NavDesk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 50px;
+}
+
+.Navbar .container .NavDesk .telegram a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .container .NavDesk .telegram a p {
+  font-size: 15px;
+  line-height: 17px;
+  color: #757782;
+}
+
+.Navbar .container .NavDesk .telegram a h5 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1c1e26;
+}
+
+.Navbar .container .NavDesk .NavNetworks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.Navbar .container .NavDesk .NavNetworks .instagram,
+.Navbar .container .NavDesk .NavNetworks .facebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 38px;
+  width: 38px;
+  background: #f1f2f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Navbar .container .NavDesk .NavNetworks .instagram:hover,
+.Navbar .container .NavDesk .NavNetworks .facebook:hover {
+  border: 1px solid #22a4e2;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.Navbar .container .NavDesk .CallMarkaz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.Navbar .container .NavDesk .CallMarkaz .CallDesk p {
+  color: #757782;
+  font-size: 14px;
+}
+
+.Navbar .container .NavDesk .CallMarkaz .CallDesk h4 {
+  color: #1c1e26;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.Navbar .container .NavDesk .NavEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .container .NavDesk .NavEmail .SmsDesk p {
+  color: #757782;
+  font-size: 14px;
+}
+
+.Navbar .container .NavDesk .NavEmail .SmsDesk h4 {
+  color: #1c1e26;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.Navbar .NavbarBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 13px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-top: 1px solid #e0e2e8;
+}
+
+.Navbar .NavbarBottom .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .NavbarBottom .NavLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 7rem;
+  position: relative;
+}
+
+.Navbar .NavbarBottom .NavLinks ul li {
+  color: #757782;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.Navbar .NavbarBottom .NavLinks ul li::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: #3498db;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.Navbar .NavbarBottom .NavLinks ul li::before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #3498db;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.Navbar .NavbarBottom .NavLinks ul li:hover {
+  color: #22a4e2;
+}
+
+.Navbar .NavbarBottom .NavLinks ul li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.Navbar .NavbarBottom .NavLinks ul li:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.Navbar .NavbarBottom .NavEnd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Search {
+  display: none;
+}
+
+.NavSignUpBtn,
+.Navbar .container .bars,
+.Navbar .container .NavDesk .telegram a h2 {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  .Navbar .NavbarBottom .NavLinks ul {
+    gap: 0 3rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .Navbar .NavbarBottom .NavLinks ul {
+    gap: 0 0.5rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .NavTop .NavDesk .Search {
+    display: block;
+  }
+  .Search {
+    display: block;
+  }
+  .NavSignUpBtn,
+  .Navbar .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 10px;
+  }
+  .NavSignUpBtn,
+  .Navbar .container .NavSignUpBtn {
+    display: block;
+    text-align: center;
+  }
+  .Navbar .container .NavDesk {
+    gap: 5px;
+  }
+  .Navbar .container .NavDesk .NavNetworks .telegram a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+  .Navbar .NavbarBottom .NavLinks {
+    width: 100%;
+  }
+  .Navbar .NavbarBottom .NavLinks ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Navbar .NavbarBottom .NavLinks ul li {
+    font-size: 14px;
+  }
+  .Navbar .container .NavDesk .telegram a h2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1c1e26;
+    display: block;
+  }
+  .Navbar .container .NavDesk .telegram a h5,
+  .Navbar .container .NavDesk .telegram a p,
+  .Navbar .container .NavDesk .NavNetworks .instagram,
+  .Navbar .container .NavDesk .NavNetworks .facebook {
+    display: none;
+  }
+  .Navbar .NavbarBottom .NavEnd {
+    display: none;
+  }
+}
+
+@media (max-width: 610px) {
+  .Navbar .container {
+    padding: 0 5px;
+  }
+  .Navbar .container {
+    -ms-grid-columns: 80px auto;
+        grid-template-columns: 80px auto;
+  }
+  .Navbar .container .NavDesk {
+    gap: 2px;
+  }
+  .Navbar .NavbarBottom .NavLinks ul {
+    gap: 2px;
+  }
+  .Navbar .container .NavDesk .telegram a {
+    margin: 0;
+    gap: 5px;
+  }
+  .Navbar .container .NavDesk .CallMarkaz {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Navbar .NavTop {
+    border-bottom: 1px solid #e0e2e8;
+  }
+  .Navbar .NavTop .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .Navbar .container .NavLogo {
+    width: 157px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Navbar .container .NavLogo img {
+    width: 157px;
+  }
+  .NavSignUpBtn,
+  .Navbar .container .bars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .NavSignUpBtn .btn {
+    padding: 10px 20px;
+  }
+  .Search,
+  .Navbar .NavbarBottom,
+  .Navbar .container .NavDesk {
+    display: none;
+  }
+  .Navbar {
+    height: 100px;
+    border-bottom: none;
+  }
+  .NavSignUpBtn .btn {
+    padding: 7px 15px;
+  }
+}
+
+.NavbarSm {
+  padding: 63px 0;
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.NavbarSm .container {
+  max-width: 576px;
+  margin: auto;
+}
+
+.NavbarSm h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e0e2e8;
+  margin: 10px 0;
+  width: 100%;
+  padding: 0 15px 15px 15px;
+}
+
+.NavbarSm h1 svg {
+  margin-right: 12px;
+}
+
+.NavbarSm h1 span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #696969;
+}
+
+.NavbarSm .homePage {
+  z-index: 9999 !important;
+  position: fixed;
+  top: 100px;
+  background: #fff;
+  width: 100%;
+  padding: 0 15px 15px;
+}
+
+.NavbarSm .homePage ul {
+  border-bottom: 1px solid #e0e2e8;
+}
+
+.NavbarSm .homePage ul li {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #757782;
+  margin: 25px 0;
+}
+
+.NavbarSm .contactUs .touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 0 29px;
+}
+
+.NavbarSm .contactUs .touch span {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1c1e26;
+  margin-left: 14px;
+}
+
+.NavbarSm .contactUs .callCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.NavbarSm .contactUs .callCenter svg {
+  margin-bottom: 7px;
+}
+
+.NavbarSm .contactUs .callCenter .call {
+  margin-left: 14px;
+}
+
+.NavbarSm .contactUs .callCenter .call span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #757782;
+}
+
+.NavbarSm .contactUs .callCenter .call p {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1c1e26;
+}
+/*# sourceMappingURL=Navbar.css.map */

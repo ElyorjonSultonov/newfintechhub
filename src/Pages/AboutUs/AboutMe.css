@@ -1,0 +1,108 @@
+.AboutMe {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  padding: 5rem 0;
+  margin-bottom: 2rem;
+}
+
+.AboutMe .AboutBox .AboutCourseStart h6 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #22a4e2;
+}
+
+.AboutMe .AboutBox .AboutCourseStart h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.AboutMe .AboutBox .AboutCourseStart p {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #757782;
+  margin: 3rem 0 4rem 0;
+}
+
+.AboutMe .AboutBox .AboutCourseMusts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0;
+}
+
+.AboutMe .AboutBox .AboutCourseMusts .MustText {
+  padding-left: 2rem;
+}
+
+.AboutMe .AboutBox .btn {
+  padding: 15px 40px;
+  margin-top: 2rem;
+}
+
+.AboutMe .AboutBox2 {
+  position: relative;
+}
+
+.AboutMe .AboutBox2 .AboutImg1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.AboutMe .AboutBox2 .AboutImg2 {
+  position: absolute;
+  top: 50%;
+  right: 45%;
+  z-index: 3;
+}
+
+.AboutMe .AboutBox2 .AboutImg3 {
+  position: absolute;
+  top: 7%;
+  right: 60%;
+}
+
+@media (max-width: 744px) {
+  .AboutCourseMusts .MustsImg .smallChanceImg {
+    display: block;
+  }
+  .AboutCourseMusts .MustsImg svg:first-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .AboutMe .AboutBox .AboutCourseStart h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .AboutMe .AboutBox .AboutCourseStart p {
+    font-size: 12px;
+    margin: 2rem 0 3rem 0;
+    line-height: 20px;
+  }
+  .AboutMe .AboutBox .AboutCourseMusts .MustText {
+    padding: 0 0.5rem;
+  }
+  .AboutMe .AboutBox .AboutCourseMusts .MustText h2 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .AboutMe .AboutBox .btn {
+    padding: 10px 20px;
+  }
+}
+/*# sourceMappingURL=AboutMe.css.map */

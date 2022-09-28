@@ -1,340 +1,502 @@
-$BrendColor: #22A4E2;
+$BrendColor: #22a4e2;
 $gray: #757782;
-$black: #1C1E26;
-$white: #F1F2F6;
+$black: #1c1e26;
+$white: #f1f2f6;
 
-.activeColor {
-    color: $BrendColor  !important;
-}
+// .activeColor {
+//   color: $BrendColor !important;
+// }
 
 .btn {
-    background: $BrendColor;
-    border-radius: 5px;
-    padding: 15px 30px;
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid $BrendColor;
-    transition: 0.3ms ease-in-out;
+  background: $BrendColor;
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: #22a4e2;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid $BrendColor;
+  transition: all 0.4s linear;
 
-    &:hover {
-        background-color: #fff;
-        color: $BrendColor;
-    }
+  background: conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left,
+    conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left,
+    conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left,
+    conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left,
+    conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right,
+    conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right,
+    conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right,
+    conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right, #22a4e2;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  background-size: 202% 202%;
+  transition: 0.5s;
+
+  &:hover {
+    background-position: center;
+    color: #ffffff;
+  }
 }
 
 @media (max-width: 576px) {
-    .btn {
-        padding: 10px 20px;
-        font-size: 12px;
-    }
+  .btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
 }
 
 .Navbar {
-    height: 176px;
+  // height: 160px !important;
+  z-index: 11;
+  width: 100%;
+  background-color: #ffffff;
+  .NavTop {
+    // height: 90px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    // padding-bottom: 10px;
+    z-index: 11;
+  }
+  .NavTop .bars .barsMenu {
+    font-size: 25px;
+  }
 
-    .NavTop {
-        height: 100px;
-        display: flex;
-        align-items: center;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .NavLogo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.4s linear;
+      &:hover {
+        transform: scale(1.3);
+      }
     }
 
-    .container {
-        width: 100%;
+    .NavDesk {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 50px;
+
+      .telegram a {
         display: flex;
-        justify-content: space-between;
+        gap: 1rem;
         align-items: center;
 
-        .NavLogo {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        p {
+          font-size: 15px;
+          line-height: 17px;
+          color: #757782;
         }
 
-        .NavDesk {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            gap: 50px;
-
-            .telegram a {
-                display: flex;
-                gap: 1rem;
-                align-items: center;
-
-                p {
-                    font-size: 15px;
-                    line-height: 17px;
-                    color: #757782;
-                }
-
-                h5 {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #1C1E26;
-                }
-            }
-
-            .NavNetworks {
-                display: flex;
-                gap: 1.5rem;
-
-                .instagram,
-                .facebook {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 38px;
-                    width: 38px;
-                    background: $white;
-                    border-radius: 50%;
-                }
-            }
-
-            .CallMarkaz {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                .CallDesk {
-                    p {
-                        color: $gray;
-                        font-size: 14px;
-                    }
-
-                    h4 {
-                        color: $black;
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-                }
-            }
-
-            .NavEmail {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-
-                .SmsDesk {
-                    p {
-                        color: $gray;
-                        font-size: 14px;
-                    }
-
-                    h4 {
-                        color: $black;
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-
-                }
-            }
+        h5 {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          color: #1c1e26;
         }
-    }
+      }
 
-    .NavbarBottom {
+      .NavNetworks {
+        display: flex;
+        gap: 1.5rem;
+
+        .instagram,
+        .facebook {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 38px;
+          width: 38px;
+          background: $white;
+          border-radius: 50%;
+          cursor: pointer;
+          &:hover {
+            border: 1px solid #22a4e2;
+            transform: rotateY(360deg);
+          }
+        }
+      }
+
+      .CallMarkaz {
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 76px;
+        gap: 10px;
 
-        .container {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .CallDesk {
+          p {
+            color: $gray;
+            font-size: 14px;
+          }
+
+          h4 {
+            color: $black;
+            font-weight: 500;
+            font-size: 16px;
+          }
         }
+      }
 
-        border-top: 1px solid #E0E2E8;
+      .NavEmail {
+        display: flex;
+        gap: 10px;
+        align-items: center;
 
-        .NavLinks {
-            ul {
-                display: flex;
-                align-items: center;
-                gap: 0 7rem;
+        .SmsDesk {
+          p {
+            color: $gray;
+            font-size: 14px;
+          }
 
-                li {
-                    color: $gray;
-                    font-weight: 500;
-                    font-size: 16px;
-
-                }
-            }
+          h4 {
+            color: $black;
+            font-weight: 500;
+            font-size: 16px;
+          }
         }
-
-        .NavEnd {
-            display: flex;
-            gap: 0 20px;
-            align-items: center;
-        }
+      }
     }
+  }
+  // .NavbarBottom {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   padding: 13px 0;
+  //   position: sticky;
+  //   top: 0;
+  //   .container {
+  //     width: 100%;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //   }
+  //   border-top: 1px solid #e0e2e8;
+  //   .NavLinks {
+  //     ul {
+  //       display: flex;
+  //       align-items: center;
+  //       gap: 0 7rem;
+  //       position: relative;
+  //       li {
+  //         color: $gray;
+  //         font-weight: 500;
+  //         font-size: 16px;
+  //         cursor: pointer;
+  //         position: relative;
+  //         &::after {
+  //           position: absolute;
+  //           content: "";
+  //           top: 100%;
+  //           left: 0;
+  //           width: 100%;
+  //           height: 2.5px;
+  //           background: #3498db;
+  //           transform: scaleX(0);
+  //           transform-origin: right;
+  //           transition: transform 0.5s;
+  //         }
+  //         &::before {
+  //           position: absolute;
+  //           content: "";
+  //           bottom: 100%;
+  //           right: 0;
+  //           width: 100%;
+  //           height: 2px;
+  //           background: #3498db;
+  //           transform: scaleX(0);
+  //           transform-origin: left;
+  //           transition: transform 0.5s;
+  //         }
+
+  //         &:hover {
+  //           color: #22a4e2;
+  //         }
+  //         &:hover::after {
+  //           transform: scaleX(1);
+  //           transform-origin: left;
+  //         }
+  //         &:hover::before {
+  //           transform: scaleX(1);
+  //           transform-origin: right;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .NavEnd {
+  //     display: flex;
+  //     gap: 0 20px;
+  //     align-items: center;
+  //   }
+  // }
 }
 
-
 .Search {
-    display: none;
+  display: none;
 }
 
 .NavSignUpBtn,
 .Navbar .container .bars,
 .Navbar .container .NavDesk .telegram a h2 {
-    display: none;
+  display: none;
 }
 
-@media (max-width: 1250px) {
-    .Navbar .NavbarBottom .NavLinks ul {
-        gap: 0 3rem;
-    }
-}
+// @media (max-width: 1250px) {
+//   .Navbar .NavbarBottom .NavLinks ul {
+//     gap: 0 3rem;
+//   }
+// }
 
-@media (max-width: 950px) {
-    .Navbar .NavbarBottom .NavLinks ul {
-        gap: 0 .5rem;
-    }
-}
+// @media (max-width: 950px) {
+//   .Navbar .NavbarBottom .NavLinks ul {
+//     gap: 0 0.5rem;
+//   }
+// }
 
 @media (max-width: 744px) {
-    .NavTop {
-        .NavDesk {
-            .Search {
-                display: block;
-            }
-
-
-        }
-    }
-
-    .Search {
+  .NavTop {
+    .NavDesk {
+      .Search {
         display: block;
+      }
     }
+  }
 
-    .NavSignUpBtn,
-    .Navbar .container {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
+  .Search {
+    display: block;
+  }
 
-    .NavSignUpBtn,
-    .Navbar .container .NavSignUpBtn {
-        display: block;
-        text-align: center;
-    }
+  .NavSignUpBtn,
+  .Navbar .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
 
-    .Navbar .container .NavDesk {
-        gap: 5px;
-    }
+  .NavSignUpBtn,
+  .Navbar .container .NavSignUpBtn {
+    display: block;
+    text-align: center;
+  }
 
-    .Navbar .container .NavDesk .NavNetworks .telegram a {
-        display: flex;
-        justify-content: center;
-        display: none;
-    }
+  .Navbar .container .NavDesk {
+    gap: 5px;
+  }
 
-    .Navbar .NavbarBottom .NavLinks {
-        width: 100%;
-    }
+  .Navbar .container .NavDesk .NavNetworks .telegram a {
+    display: flex;
+    justify-content: center;
+    display: none;
+  }
 
-    .Navbar .NavbarBottom .NavLinks ul {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+  // .Navbar .NavbarBottom .NavLinks {
+  //   width: 100%;
+  // }
 
-    .Navbar .NavbarBottom .NavLinks ul li {
-        font-size: 14px;
-    }
+  // .Navbar .NavbarBottom .NavLinks ul {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 
-    .Navbar .container .NavDesk .telegram a h2 {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        color: #1C1E26;
-        display: block;
-    }
+  // .Navbar .NavbarBottom .NavLinks ul li {
+  //   font-size: 14px;
+  // }
 
-    .Navbar .container .NavDesk .telegram a h5,
-    .Navbar .container .NavDesk .telegram a p,
-    .Navbar .container .NavDesk .NavNetworks .instagram,
-    .Navbar .container .NavDesk .NavNetworks .facebook {
-        display: none;
-    }
+  .Navbar .container .NavDesk .telegram a h2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1c1e26;
+    display: block;
+  }
 
-    .Navbar .NavbarBottom .NavEnd {
-        display: none;
-    }
+  .Navbar .container .NavDesk .telegram a h5,
+  .Navbar .container .NavDesk .telegram a p,
+  .Navbar .container .NavDesk .NavNetworks .instagram,
+  .Navbar .container .NavDesk .NavNetworks .facebook {
+    display: none;
+  }
+
+  // .Navbar .NavbarBottom .NavEnd {
+  //   display: none;
+  // }
 }
 
 @media (max-width: 610px) {
-    .Navbar .container {
-        padding: 0 5px;
-    }
+  .Navbar .container {
+    padding: 0 5px;
+  }
 
-    .Navbar .container {
-        grid-template-columns: 80px auto;
-    }
+  .Navbar .container {
+    grid-template-columns: 80px auto;
+  }
 
-    .Navbar .container .NavDesk {
-        gap: 2px;
-    }
+  .Navbar .container .NavDesk {
+    gap: 2px;
+  }
 
-    .Navbar .NavbarBottom .NavLinks ul {
-        gap: 2px;
-    }
+  // .Navbar .NavbarBottom .NavLinks ul {
+  //   gap: 2px;
+  // }
 
-    .Navbar .container .NavDesk .telegram a {
-        margin: 0;
-        gap: 5px;
-    }
+  .Navbar .container .NavDesk .telegram a {
+    margin: 0;
+    gap: 5px;
+  }
 
-    .Navbar .container .NavDesk .CallMarkaz {
-        gap: 5px;
-    }
+  .Navbar .container .NavDesk .CallMarkaz {
+    gap: 5px;
+  }
 }
 
 @media (max-width: 576px) {
-    .Navbar .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .Navbar .NavTop {
+    border-bottom: 1px solid #e0e2e8;
+  }
+  .Navbar .NavTop .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .Navbar .container .NavLogo {
-        width: 157px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .Navbar .container .NavLogo {
+    width: 157px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .Navbar .container .NavLogo img {
-        width: 157px;
-    }
+  .Navbar .container .NavLogo img {
+    width: 157px;
+  }
 
-    .NavSignUpBtn,
-    .Navbar .container .bars {
-        display: flex;
-        align-items: center;
-    }
+  .NavSignUpBtn,
+  .Navbar .container .bars {
+    display: flex;
+    align-items: center;
+  }
 
-    .NavSignUpBtn .btn {
-        padding: 10px 20px;
-    }
+  .NavSignUpBtn .btn {
+    padding: 10px 20px;
+  }
 
-    .Search,
-    .Navbar .NavbarBottom,
-    .Navbar .container .NavDesk {
-        display: none;
-    }
+  .Search,
+  .Navbar .NavbarBottom,
+  .Navbar .container .NavDesk {
+    display: none;
+  }
 
-    .Navbar {
-        height: 100px;
-        border-bottom: 1px solid #E0E2E8;
-    }
+  .Navbar {
+    height: 100px;
+    border-bottom: none;
+  }
 
-    .NavSignUpBtn .btn {
-        padding: 7px 15px;
-    }
+  .NavSignUpBtn .btn {
+    padding: 7px 15px;
+  }
+}
+
+// navbar sm style==================
+
+.NavbarSm {
+  padding: 63px 0;
+  // display: none;
+  display: block;
+}
+.d-none {
+  display: none;
+}
+
+.NavbarSm .container {
+  max-width: 576px;
+  margin: auto;
+}
+
+.NavbarSm h1 {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e2e8;
+  margin: 10px 0;
+  width: 100%;
+  padding: 0 15px 15px 15px;
+}
+
+.NavbarSm h1 svg {
+  margin-right: 12px;
+}
+.NavbarSm h1 span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #696969;
+}
+
+.NavbarSm .homePage {
+  z-index: 9999 !important;
+  position: fixed;
+  top: 100px;
+  background: #fff;
+  width: 100%;
+  padding: 0 15px 15px;
+}
+.NavbarSm .homePage ul {
+  border-bottom: 1px solid #e0e2e8;
+}
+
+.NavbarSm .homePage ul li {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #757782;
+  margin: 25px 0;
+}
+
+.NavbarSm .contactUs .touch {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 29px;
+}
+.NavbarSm .contactUs .touch span {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1c1e26;
+  margin-left: 14px;
+}
+.NavbarSm .contactUs .callCenter {
+  display: flex;
+  align-items: flex-end;
+}
+.NavbarSm .contactUs .callCenter svg {
+  margin-bottom: 7px;
+}
+.NavbarSm .contactUs .callCenter .call {
+  margin-left: 14px;
+}
+
+.NavbarSm .contactUs .callCenter .call span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #757782;
+}
+.NavbarSm .contactUs .callCenter .call p {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1c1e26;
 }

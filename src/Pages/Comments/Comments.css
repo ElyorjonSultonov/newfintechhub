@@ -1,0 +1,219 @@
+.Comments {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.Comments .CommentsTitle {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #22a4e2;
+}
+
+.Comments .CommentContext {
+  width: 100%;
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Comments .CommentContext .CommentsMe h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  padding: 40px 0;
+}
+
+.Comments .CommentContext .CommentsMe p {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #757782;
+  margin-top: 3rem;
+}
+
+.Comments .CommentContext .CommentBox {
+  height: 40x 0px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 2rem;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Comments .CommentContext .CommentBox h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #22a4e2;
+}
+
+.Comments .CommentContext .CommentBox p {
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.04em;
+  color: #757782;
+  margin: 2rem 0rem;
+}
+
+.Comments .CommentContext .CommentBox .PersonsAbout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Comments .CommentContext .CommentBox .PersonsAbout .personAbout {
+  padding: 0 1rem;
+}
+
+.Comments .CommentContext .CommentBox .PersonsAbout .personAbout h1 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.Comments .CommentContext .CommentBox .PersonsAbout .personAbout h6 {
+  font-size: 12px;
+  line-height: 15px;
+  color: #757782;
+}
+
+.swiper-wrapper {
+  padding: 0 !important;
+}
+
+.career {
+  position: relative;
+  background: url(../../assets/images/careerBg.png);
+  background-size: cover;
+  height: 300px;
+  color: #fff;
+  margin-top: 7rem;
+}
+
+.career .container {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.career h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.career .btn2 {
+  padding: 15px 40px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.career::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(../../assets/images/careerBg1.png);
+  width: 180px;
+  height: 180px;
+  background-repeat: no-repeat;
+}
+
+.career::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 21px;
+  background: url(../../assets/images/careerBg2.png);
+  width: 468px;
+  height: 235px;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 744px) {
+  .career h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .Comments .CommentContext .CommentBox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .career .container,
+  .career {
+    height: 200px;
+  }
+  .Comments .CommentContext .CommentsMe h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .career .btn2 {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .career h1 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .career .container,
+  .career {
+    height: 150px;
+  }
+  .career .btn2 {
+    padding: 7px 15px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .Comments .CommentContext .CommentsMe h1 {
+    font-size: 24px;
+  }
+  .Comments .CommentContext {
+    display: block;
+  }
+  .Comments .CommentContext .CommentsMe p {
+    margin: 0;
+  }
+  .Comments .CommentContext .CommentBox {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 1rem;
+    height: 390px;
+  }
+}
+/*# sourceMappingURL=Comments.css.map */
