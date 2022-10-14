@@ -1,0 +1,49 @@
+// you get
+.Youget {
+  margin: 7.5rem 0;
+}
+.Youget .blue_title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #22a4e2;
+}
+.Youget .lt-title {
+  margin-bottom: 3.125rem;
+}
+.Youget .wrap_ul {
+  display: grid;
+  grid-template-columns: 45% 46%;
+  justify-content: space-around;
+}
+.Youget .wrap_ul ul li {
+  list-style: circle;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  /* or 160% */
+  color: #000000;
+  margin: 0.625rem 0;
+  opacity: 0.7;
+}
+
+@media (max-width: 567px) {
+  .Youget .wrap_ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .Youget .wrap_ul ul li {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    opacity: 0.7;
+  }
+}

@@ -2,25 +2,29 @@ import React, { useState } from "react";
 import "./Navbar.scss";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(true)
+  const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(true);
   const showBtnBars = () => {
-    setIsMobile((p) => !p)
-  }
+    setIsMobile((p) => !p);
+  };
   return (
     <>
       <div className="Navbar">
         <div className="NavTop">
           <div className="container">
             <div onClick={showBtnBars} className="bars">
-              {isMobile ? (<AiOutlineMenu className="barsMenu" />) : (
+              {isMobile ? (
+                <AiOutlineMenu className="barsMenu" />
+              ) : (
                 <AiOutlineClose className="barsMenu" />
               )}
             </div>
             <div className="NavLogo">
               <svg
+                onClick={() => navigate("/")}
                 width="100"
                 height="52"
                 viewBox="0 0 100 52"
@@ -212,8 +216,17 @@ const Navbar = () => {
               </div>
               <div className="telegram">
                 <a href="https://t.me/fintechhub_admin1">
-                  <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.40821 9.85045C9.20856 6.83985 13.7432 4.85507 16.0121 3.89613C22.4903 1.15814 23.8364 0.682529 24.7138 0.666656C24.9068 0.663369 25.3383 0.711965 25.6177 0.942409C25.8537 1.13699 25.9187 1.39984 25.9497 1.58433C25.9808 1.76882 26.0195 2.18908 25.9887 2.51746C25.6377 6.26555 24.1187 15.3612 23.3459 19.5591C23.0189 21.3354 22.375 21.931 21.7517 21.9893C20.397 22.1159 19.3684 21.0796 18.0563 20.2056C16.0032 18.8381 14.8434 17.9868 12.8505 16.6523C10.5473 15.1101 12.0404 14.2625 13.3529 12.8772C13.6964 12.5147 19.665 6.99818 19.7806 6.49774C19.795 6.43515 19.8084 6.20186 19.672 6.07867C19.5356 5.95548 19.3343 5.9976 19.189 6.03111C18.9831 6.0786 15.7033 8.28143 9.3495 12.6396C8.41853 13.2892 7.57528 13.6057 6.81976 13.5891C5.98686 13.5708 4.38469 13.1106 3.19364 12.7172C1.73277 12.2346 0.571706 11.9795 0.672809 11.16C0.72547 10.7332 1.30394 10.2967 2.40821 9.85045Z" fill="#22A4E2" />
+                  <svg
+                    width="26"
+                    height="22"
+                    viewBox="0 0 26 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.40821 9.85045C9.20856 6.83985 13.7432 4.85507 16.0121 3.89613C22.4903 1.15814 23.8364 0.682529 24.7138 0.666656C24.9068 0.663369 25.3383 0.711965 25.6177 0.942409C25.8537 1.13699 25.9187 1.39984 25.9497 1.58433C25.9808 1.76882 26.0195 2.18908 25.9887 2.51746C25.6377 6.26555 24.1187 15.3612 23.3459 19.5591C23.0189 21.3354 22.375 21.931 21.7517 21.9893C20.397 22.1159 19.3684 21.0796 18.0563 20.2056C16.0032 18.8381 14.8434 17.9868 12.8505 16.6523C10.5473 15.1101 12.0404 14.2625 13.3529 12.8772C13.6964 12.5147 19.665 6.99818 19.7806 6.49774C19.795 6.43515 19.8084 6.20186 19.672 6.07867C19.5356 5.95548 19.3343 5.9976 19.189 6.03111C18.9831 6.0786 15.7033 8.28143 9.3495 12.6396C8.41853 13.2892 7.57528 13.6057 6.81976 13.5891C5.98686 13.5708 4.38469 13.1106 3.19364 12.7172C1.73277 12.2346 0.571706 11.9795 0.672809 11.16C0.72547 10.7332 1.30394 10.2967 2.40821 9.85045Z"
+                      fill="#22A4E2"
+                    />
                   </svg>
                   <span>
                     <p>Telegramdan bog’laning</p>
@@ -290,7 +303,7 @@ const Navbar = () => {
       </div>
       {/* Navbar sm start ========================== */}
 
-      <div className={!isMobile ? "NavbarSm" : "d-none"} >
+      <div className={!isMobile ? "NavbarSm" : "d-none"}>
         <h1>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path

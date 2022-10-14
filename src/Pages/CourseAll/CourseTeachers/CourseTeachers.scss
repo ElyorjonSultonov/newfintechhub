@@ -1,0 +1,128 @@
+// course teachers
+.courseTeachers .who {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #22a4e2;
+}
+.courseTeachers .social {
+  display: flex;
+  align-items: center;
+}
+
+.courseTeachers .social .telegram {
+  margin: 0 20px;
+}
+
+.courseTeachers .sm_social {
+  display: none;
+}
+
+.courseTeachers .lt-title {
+  margin-top: 0.625rem;
+  margin-bottom: 3.75rem;
+}
+
+.courseTeachers .AbuotTeach {
+  background: #ffffff;
+  border: 1px solid #e0e2e8;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 35px 85px 34px 40px;
+  width: 100%;
+  display: flex;
+  grid-column-gap: 40px;
+}
+.courseTeachers .AbuotTeach .boxImg {
+  display: grid;
+  flex-direction: column;
+}
+.courseTeachers .AbuotTeach .boxImg img {
+  margin-bottom: 30px;
+}
+.courseTeachers .AbuotTeach .boxImg button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 18px 20px;
+  color: #757782;
+  border: none;
+  border-radius: 5px;
+}
+.courseTeachers .AbuotTeach .teacherTxt .name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 0.625rem;
+}
+.courseTeachers .AbuotTeach .teacherTxt .about {
+  margin-top: 1.875rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #383232;
+  margin-bottom: 2.875rem;
+}
+.courseTeachers .AbuotTeach .teacherTxt .social i {
+  margin-right: 1.563rem;
+  font-size: 20px;
+}
+
+@media (max-width: 567px) {
+  .courseTeachers .lt-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+  .courseTeachers .AbuotTeach {
+    flex-direction: column;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  .courseTeachers .AbuotTeach .boxImg {
+    text-align: center !important;
+  }
+  .courseTeachers .AbuotTeach .boxImg img {
+    max-width: 90px;
+    margin: auto;
+    margin-bottom: 1.25rem;
+  }
+  .courseTeachers .AbuotTeach .boxImg button {
+    display: none;
+  }
+  .courseTeachers .sm_social {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f1f2f6;
+    border-radius: 5px;
+  }
+  .courseTeachers .sm_social p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #757782;
+  }
+  .courseTeachers .sm_social .wrap_social i {
+    font-size: 13px;
+    margin: 0px 13px;
+  }
+  .courseTeachers .social {
+    display: none;
+  }
+}

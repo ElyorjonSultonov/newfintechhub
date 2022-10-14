@@ -1,0 +1,308 @@
+$BrendColor: #22a4e2;
+$gray: #757782;
+$black: #1c1e26;
+$white: #f1f2f6;
+//
+
+// slider style
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: white !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  display: inline-block;
+  border-radius: 50%;
+  background: white !important;
+}
+
+// slider style
+
+.ShowCase {
+  //   width: 100%;
+  //   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  //     url(../../images/showcase.png);
+  //   background-size: cover;
+  //   height: calc(100vh);
+  //   color: #fff;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // padding-top: 157px;
+  .ShowCaseText {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../../assets/images/showcase.png);
+    background-size: cover;
+    height: calc(100vh);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -40px;
+    p {
+      opacity: 0.7;
+      letter-spacing: 0.04em;
+      font-size: 24px;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 72px;
+      letter-spacing: 0.04em;
+      margin: 3rem 0;
+    }
+
+    .btn {
+      padding: 15px 40px;
+      font-size: 16px;
+    }
+  }
+}
+
+.chance {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 3rem 0;
+  .chanceBox {
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    &:hover {
+      border: 1px solid #22a4e2;
+      padding: 0.5rem 0 !important;
+      background: #d3f1ff;
+    }
+
+    .chanceImg {
+      padding: 0.5rem 1rem;
+      transition: all 0.4s linear;
+      cursor: pointer;
+      &:hover {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .chanseAbout {
+      display: flex;
+
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        color: $gray;
+        line-height: 30px;
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .AboutMe {
+    grid-template-columns: 50% 50%;
+  }
+
+  .chance {
+    gap: 1rem;
+  }
+
+  .chance .chanceBox .chanceImg {
+    padding: 0.5rem;
+  }
+
+  .chance .chanceBox .chanseAbout {
+    padding: 0;
+  }
+
+  .chance .chanceBox .chanseAbout p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .chance .chanceBox .chanseAbout h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .AboutMe .AboutBox2 .AboutImg1 {
+    width: 70%;
+  }
+  .AboutMe .AboutBox2 .AboutImg2 {
+    top: 30%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 744px) {
+  .ShowCase .ShowCaseText {
+    height: 70vh;
+  }
+
+  .ShowCase .ShowCaseText p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .ShowCase .ShowCaseText h1 {
+    font-size: 45px;
+    line-height: 54px;
+  }
+
+  .chance {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .chance .chanceBox .chanceImg {
+    padding: 0 0.5rem;
+  }
+
+  .chance .chanceBox .chanseAbout {
+    padding: 0;
+  }
+
+  .chance .chanceBox .chanseAbout p {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .chance .chanceBox .chanseAbout h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+
+  .AboutMe {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .AboutMe .AboutBox2 {
+    margin-top: 4rem;
+  }
+
+  .AboutMe .AboutBox2 .AboutImg2 {
+    left: 0;
+  }
+
+  .AboutMe .AboutBox2 .AboutImg3 {
+    position: absolute;
+    transform: translateY(10%);
+    right: 65%;
+  }
+
+  .AboutMe .AboutBox2 {
+    height: 550px;
+  }
+
+  .chance .chanceBox .chanceImg .smallChanceImg {
+    display: block;
+  }
+
+  .chance .chanceBox .chanceImg svg:first-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  // .ShowCase {
+  //   padding-top: 100px;
+  // }
+  .chance {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .chance .chanceBox {
+    padding: 1rem !important;
+    margin-bottom: 10px;
+  }
+  .chance .chanceBox .chanceImg {
+    padding: 0.5rem;
+  }
+
+  .chance .chanceBox .chanseAbout {
+    padding: 0rem;
+  }
+
+  .chance .chanceBox .chanseAbout p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .chance .chanceBox .chanseAbout h4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .ShowCase .ShowCaseText {
+    height: 50vh;
+  }
+
+  .ShowCase .ShowCaseText p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .ShowCase .ShowCaseText h1 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .ShowCase .ShowCaseText .btn {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .chance {
+    grid-gap: 0.3rem;
+  }
+  .chance .chanceBox .chanceImg {
+    padding: 0 2px;
+  }
+  .chance .chanceBox {
+    padding: 0;
+  }
+
+  .chance .chanceBox .chanseAbout p {
+    font-size: 12px;
+  }
+  .chance .chanceBox .chanseAbout h4 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.smallChanceImg {
+  display: none;
+}
+
+@media (max-width: 325px) {
+  .chance .chanceBox .chanseAbout {
+    padding: 0;
+  }
+
+  .chance .chanceBox {
+    padding: 0rem;
+  }
+  .chance .chanceBox .chanceImg {
+    padding: 0.5rem;
+  }
+}
