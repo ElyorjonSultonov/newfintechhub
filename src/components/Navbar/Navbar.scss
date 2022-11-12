@@ -7,36 +7,77 @@ $white: #f1f2f6;
 //   color: $BrendColor !important;
 // }
 
-.btn {
-  background: $BrendColor;
-  border-radius: 5px;
+// .btn {
+//   background: $BrendColor;
+//   border-radius: 5px;
+//   padding: 15px 30px;
+//   color: #22a4e2;
+//   font-weight: 500;
+//   font-size: 14px;
+//   border: none;
+//   outline: none;
+//   cursor: pointer;
+//   border: 1px solid $BrendColor;
+//   transition: all 0.4s linear;
+
+//   background: conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left,
+//     conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left,
+//     conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left,
+//     conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left,
+//     conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right,
+//     conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right,
+//     conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right,
+//     conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right, #22a4e2;
+//   -webkit-background-clip: text, padding-box;
+//   background-clip: text, padding-box;
+//   background-size: 202% 202%;
+//   transition: 0.5s;
+
+//   &:hover {
+//     background-position: center;
+//     color: #ffffff;
+//   }
+// }
+// -------------------------------------
+
+.btn-read {
+  position: relative;
+  display: inline-block;
   padding: 15px 30px;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
   color: #22a4e2;
   font-weight: 500;
   font-size: 14px;
-  border: none;
   outline: none;
   cursor: pointer;
   border: 1px solid $BrendColor;
-  transition: all 0.4s linear;
-
-  background: conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left,
-    conic-gradient(#22a4e2 0 90deg, #fff0 0) bottom left,
-    conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left,
-    conic-gradient(from 90deg, #22a4e2 0 90deg, #fff0 0) top left,
-    conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right,
-    conic-gradient(from 180deg, #22a4e2 0 90deg, #fff0 0) top right,
-    conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right,
-    conic-gradient(from -90deg, #22a4e2 0 90deg, #fff0 0) bottom right, #22a4e2;
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  background-size: 202% 202%;
-  transition: 0.5s;
-
-  &:hover {
-    background-position: center;
-    color: #ffffff;
-  }
+  // transition: all 0.4s linear;
+}
+.btn--animated:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $BrendColor;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  z-index: -1;
+}
+.btn--animated:hover {
+  color: #fff;
+}
+.btn--animated:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
 }
 
 @media (max-width: 576px) {

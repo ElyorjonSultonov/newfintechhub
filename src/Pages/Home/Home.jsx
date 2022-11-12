@@ -30,7 +30,7 @@ const Home = () => {
               <h1>
                 Dasturlashni biz bilan <br /> yanada osonroq <br /> o’rganing!
               </h1>
-              <button className="btn">Bepul Registratsiya</button>
+              <button className="btn--border btn-read btn--animated">Bepul Registratsiya</button>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -39,7 +39,7 @@ const Home = () => {
               <h1>
                 Dasturlashni biz bilan <br /> yanada osonroq <br /> o’rganing!
               </h1>
-              <button className="btn">Bepul Registratsiya</button>
+              <button className="btn--border btn-read btn--animated">Bepul Registratsiya</button>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -48,7 +48,7 @@ const Home = () => {
               <h1>
                 Dasturlashni biz bilan <br /> yanada osonroq <br /> o’rganing!
               </h1>
-              <button className="btn">Bepul Registratsiya</button>
+              <button className="btn--border btn-read btn--animated">Bepul Registratsiya</button>
             </div>
           </SwiperSlide>
         </Swiper>

@@ -8,7 +8,9 @@ function NavbarBottom() {
       <div className="container">
         <div className="NavLinks">
           <ul className="menu-7 menu">
-            <li>Bosh sahifa</li>
+            <Link to="/">
+              <li>Bosh sahifa</li>
+            </Link>
             <li>Biz haqimizda</li>
             <Link to="/course">
               <li>Kurslarimiz</li>
@@ -38,7 +40,7 @@ function NavbarBottom() {
             </svg>
           </div>
           <div className="SignUp">
-            <button className="btn">Bepul Registratsiya</button>
+            <button type='button' className=" btn--border btn-read btn--animated">Bepul Registratsiya</button>
           </div>
         </div>
       </div>

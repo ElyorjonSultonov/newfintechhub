@@ -126,7 +126,7 @@ function Comments() {
           <h1>
             Karyerangizni aynan hoziroq <br /> biz bilan boshlang!
           </h1>
-          <button className="btn2">Bepul Registratsiya</button>
+          <button className="btn--border btn-read btn--animated w-30">Bepul Registratsiya</button>
         </div>
       </div>
     </div>
